@@ -70,22 +70,21 @@ Which worker gets which tasks? Response: As mentioned above, I had observed that
 
 See a running example with at least 3 concurrent process windows here:
 
-# Terminal 1
-![Producer Terminal 1]( "Terminal 1")
+# Producer Terminal 1
+![Producer Terminal 1]( https://github.com/pamidisushma02/streaming-04-multiple-consumers/blob/main/Producer_Terminal%201.PNG "Terminal 1")
 
-# Terminal 2
+# Producer Terminal 2
 
-![Terminal 2](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%202.png "Terminal 2")
+![Producer Terminal 2](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%202.png "Terminal 2")
 
-# Terminal 3
-![alt tag](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%203.png "Terminal 3")
+# Producer Terminal 3
+![Producer Terminal 3](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%203.png "Terminal 3")
 
-# Terminal 4
-![alt tag](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%204.png
-"Terminal 4")
+# Producer Terminal 4
+![Producer Terminal 4](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%204.png "Terminal 4")
 
-# Terminal 5
-![alt tag](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%205.png "Terminal 5")
+# Consumer Terminal 1
+![Consumer Terminal 1](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%205.png "Terminal 5")
 
-# Terminal 6
-![alt tag](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%206.png "Terminal 6")
+# Consumer Terminal 2
+![Consumer Terminal 2](https://github.com/pamidisushma02/streaming-03-rabbitmq/blob/main/Terminal%206.png "Terminal 6")
