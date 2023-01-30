@@ -1,15 +1,19 @@
 """
-    This program sends a message to a queue on the RabbitMQ server.
+    This program reads tasks from tasks.csv and sends to a queue on the RabbitMQ server.
     Make tasks harder/longer-running by adding dots at the end of the message.
 
     Author: Sushma Pamidi
-    Date: January 28, 2023
+    Date: January 29, 2023
 
 """
 
 import pika
 import sys
 import webbrowser
+# Import the below module whenever csv is involved 
+import csv
+
+
 
 def offer_rabbitmq_admin_site():
     """Offer to open the RabbitMQ Admin website"""
@@ -19,7 +23,7 @@ def offer_rabbitmq_admin_site():
         webbrowser.open_new("http://localhost:15672/#/queues")
         print()
 
-def send_message(host: str, queue_name: str, message: str):
+def send_message(host: str, queue_name: str, message):
     """
     Creates and sends a message to the queue each execution.
     This process runs and finishes.
@@ -44,7 +48,8 @@ def send_message(host: str, queue_name: str, message: str):
         # every message passes through an exchange
         ch.basic_publish(exchange="", routing_key=queue_name, body=message)
         # print a message to the console for the user
-        print(f" [x] Sent {message}")
+        
+        print("Sent", message)
     except pika.exceptions.AMQPConnectionError as e:
         print(f"Error: Connection to RabbitMQ server failed: {e}")
         sys.exit(1)
@@ -57,12 +62,38 @@ def send_message(host: str, queue_name: str, message: str):
 # without executing the code below.
 # If this is the program being run, then execute the code below
 if __name__ == "__main__":  
-    # ask the user if they'd like to open the RabbitMQ Admin site
-    offer_rabbitmq_admin_site()
-    # get the message from the command line
+    
+    # Only offer to show the prompt based on the below
+    show_offer = "False"
+
+    if show_offer == "True":
+       # ask the user if they'd like to open the RabbitMQ Admin site
+       offer_rabbitmq_admin_site()
+    else:
+        webbrowser.open_new("http://localhost:15672/#/queues")
+        print()
+
+    # Declare variables needed to read csv file as input
+    # The file name does not have to be hard coded. We can change the file name assigned to the input_file_name variable 
     # if no arguments are provided, use the default message
     # use the join method to convert the list of arguments into a string
-    # join by the space character inside the quotes
-    message = " ".join(sys.argv[1:]) or "Fourth task....."
-    # send the message to the queue
-    send_message("localhost","task_queue2",message)
+    
+
+    input_file_name = "tasks.csv"
+
+    input_file = open(input_file_name, "r")
+
+    reader = csv.reader(input_file, delimiter=",")
+
+    # header = next(reader)
+    header_list = ["message"]
+
+    # Get message from the file
+    for row in reader:
+        #Below converts list to a string. If the below is not done an error is thrown
+        message = ",".join(row)
+        # send the message to the queue
+        send_message("localhost","task_queue3",message)
+        
+
+    input_file.close()
