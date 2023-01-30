@@ -103,7 +103,7 @@ Below Screen shots are using Version 1 & 2 code base (for the more interesting s
 ![Consumer Terminal 2](https://github.com/pamidisushma02/streaming-04-multiple-consumers/blob/main/Consumer_Terminal%202.PNG "Terminal 6")
 
 
-Below Screen shots are using Version 3. Additional tasks are added to the tasks.csv file
+# Below Screen shots are using Version 3. Additional tasks are added to the tasks.csv file
 # Version 3 Producer Terminal (We are just using one terminal and this one reads all the tasks from the tasks.csv file)
 ![Producer Terminal]( https://github.com/pamidisushma02/streaming-04-multiple-consumers/blob/main/Version%203_Producer_Terminal_using%20tasks.PNG "Terminal 1")
 
