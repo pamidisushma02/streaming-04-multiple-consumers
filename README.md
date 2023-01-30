@@ -82,13 +82,12 @@ Response: As mentioned above, I had observed that both the consumer terminals re
 
 ## Screenshot
 
-See a running example with at least 3 concurrent process windows here:
+Below Screen shots are using Version 1 & 2 code base (for the more interesting screenshots from Version 3, please scroll down below)
 
 # Producer Terminal 1
 ![Producer Terminal 1]( https://github.com/pamidisushma02/streaming-04-multiple-consumers/blob/main/Producer_Terminal%201.PNG "Terminal 1")
 
 # Producer Terminal 2
-
 ![Producer Terminal 2](https://github.com/pamidisushma02/streaming-04-multiple-consumers/blob/main/Producer_Terminal%202.PNG "Terminal 2")
 
 # Producer Terminal 3
@@ -102,3 +101,14 @@ See a running example with at least 3 concurrent process windows here:
 
 # Consumer Terminal 2
 ![Consumer Terminal 2](https://github.com/pamidisushma02/streaming-04-multiple-consumers/blob/main/Consumer_Terminal%202.PNG "Terminal 6")
+
+
+Below Screen shots are using Version 3. Additional tasks are added to the tasks.csv file
+# Version 3 Producer Terminal (We are just using one terminal and this one reads all the tasks from the tasks.csv file)
+![Producer Terminal]( https://github.com/pamidisushma02/streaming-04-multiple-consumers/blob/main/Version%203_Producer_Terminal_using%20tasks.PNG "Terminal 1")
+
+# Version 3 Consumer Terminal 1
+![Consumer Terminal 1](https://github.com/pamidisushma02/streaming-04-multiple-consumers/blob/main/Version%203_Consumer_Terminal%201.PNG "Terminal 2")
+
+# Version 3 Consumer Terminal 2
+![Consumer Terminal 2](https://github.com/pamidisushma02/streaming-04-multiple-consumers/blob/main/Version%203_Consumer_Terminal%202.PNG "Terminal 3")
